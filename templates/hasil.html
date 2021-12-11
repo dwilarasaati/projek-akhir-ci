@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .form-control {
+        text-align:left!important;
+    }
+</style>
+
+    <div class="container mt-5">
+        <form>
+				<label for="inputPopulation" class="form-label mb-2">Urutan</label>	 				
+				<textarea id="hasil2" class="form-control" name="hasil2" rows="2" cols="10" readonly>{{ hasil }}</textarea>
+				
+				<label for="inputPopulation" class="form-label mb-2">Makespan</label>	 
+				<br>
+				<input type="text" class="form-control" id="makespan" name="makespan" value={{ makespan }} readonly>
+        </form>
+    </div>
+
+{% endblock %}
