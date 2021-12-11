@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <form action="{{ url_for('calculate') }}" method="post" class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="inputPopulation" class="form-label mb-2">Population Size</label>
+              <input type="number" class="form-control" id="inputPopulation" name="inputPopulation">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="inputCrossover" class="form-label mb-2">Crossover Rate</label>
+              <input type="float" class="form-control" id="inputCrossover" name="inputCrossover">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="inputMutation" class="form-label mb-2">Mutation Rate</label>
+              <input type="float" class="form-control" id="inputMutation" name="inputMutation">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="inputSelection" class="form-label mb-2">Selection Rate</label>
+              <input type="float" class="form-control" id="inputSelection" name="inputSelection">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="inputIteration" class="form-label mb-2">Number of Iteration</label>
+              <input type="number" class="form-control" id="inputIteration" name="inputIteration">
+            </div>
+            <div class="col-12 mb-3">
+              <button type="submit" class="btn btn-primary px-4 py-2">Result</button>
+            </div>
+			
+			<br><br>
+			{{ hasil }}
+        </form>
+    </div>
+{% endblock %}
